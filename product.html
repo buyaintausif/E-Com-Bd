@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>All Products | E-Com Bd</title>
+
+    <link href="./src/output.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Navbar -->
+    <!-- Copy your existing navbar from index.html here. -->
+
+
+    <!-- Navigation bar -->
+     <nav class="border-b border-gray-200 bg-white">
+    <div class="mx-auto max-w-7xl px-6">
+
+        <!-- Top section -->
+        <div class="flex items-center justify-between py-4">
+
+            <!-- Logo -->
+            <a href="index.html" class="text-2xl font-bold text-[#0f3231]">
+                BAKING BD
+            </a>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden items-center gap-8 md:flex">
+                <a href="index.html"
+                   class="text-sm  rounded-lg p-2 font-medium  text-gray-600 hover:text-[#0f3231] hover:bg-gray-200">
+                    Home
+                </a>
+
+                <a href="product.html"
+                   class="text-sm rounded-lg p-2 font-medium text-gray-600 hover:text-[#0f3231]  hover:bg-gray-200">
+                    Products
+                </a>
+
+                <a href="#categories"
+                   class="text-sm  rounded-lg p-2 font-medium text-gray-600 hover:text-[#0f3231]  hover:bg-gray-200">
+                    Categories
+                </a>
+
+                <a href="#footer"
+                   class="text-sm rounded-lg p-2 font-medium text-gray-600 hover:text-[#0f3231]  hover:bg-gray-200 ">
+                    About
+                </a>
+            </div>
+
+            <!-- Desktop Cart -->
+            <a href="cart.html"
+               class="hidden rounded-lg border border-gray-200 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 md:block">
+                Add to Cart
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button
+                id="menu-btn"
+                class="text-2xl text-gray-700 md:hidden">
+                ☰
+            </button>
+
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden pb-4 md:hidden">
+
+            <div class="flex flex-col gap-2">
+
+                <a href="index.html"
+                   class="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100">
+                    Home
+                </a>
+
+                <a href="products.html"
+                   class="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100">
+                    Products
+                </a>
+
+                <a href="#categories"
+                   class="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100">
+                    Categories
+                </a>
+
+                <a href="#about"
+                   class="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100">
+                    About
+                </a>
+
+                <a href="cart.html"
+                   class="mt-2 rounded-lg border border-gray-200 px-4 py-2 text-center text-sm font-medium text-gray-700 hover:bg-gray-50">
+                    Add to Cart
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+</nav>
+
+
+    <!-- Page Heading -->
+    <section class="bg-white px-4 py-10 sm:px-6 lg:px-8">
+
+        <div class="mx-auto max-w-7xl">
+
+            <p class="text-sm font-medium text-gray-500">
+                Home / Products
+            </p>
+
+            <h1 class="mt-4 text-3xl font-bold text-[#0f3231] sm:text-4xl">
+                All Products
+            </h1>
+
+            <p class="mt-3 max-w-2xl text-gray-600">
+                Explore our collection of quality products for your
+                everyday needs.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Products Section -->
+    <main class="px-4 py-10 sm:px-6 lg:px-8">
+
+        <div class="mx-auto max-w-7xl">
+
+            <div class="grid grid-cols-1 gap-8 lg:grid-cols-4">
+
+                <!-- Category Sidebar -->
+              <aside class="h-fit rounded-xl border border-gray-200 bg-white p-5">
+
+    <h2 class="text-lg font-bold text-gray-900">
+        Categories
+    </h2>
+
+    <ul class="mt-5 space-y-4 text-sm">
+
+        <li>
+            <button
+                type="button"
+                data-filter="all"
+                class="category-filter w-full text-left font-semibold text-[#0f3231]"
+            >
+                All Products
+            </button>
+        </li>
+
+        <li>
+            <button
+                type="button"
+                data-filter="daily-tools"
+                class="category-filter w-full text-left text-gray-600 transition hover:text-[#0f3231]"
+            >
+                Daily Tools
+            </button>
+        </li>
+
+        <li>
+            <button
+                type="button"
+                data-filter="bbq-items"
+                class="category-filter w-full text-left text-gray-600 transition hover:text-[#0f3231]"
+            >
+                BBQ Items
+            </button>
+        </li>
+
+        <li>
+            <button
+                type="button"
+                data-filter="home-kitchen"
+                class="category-filter w-full text-left text-gray-600 transition hover:text-[#0f3231]"
+            >
+                Home &amp; Kitchen
+            </button>
+        </li>
+
+        <li>
+            <button
+                type="button"
+                data-filter="eid-festival"
+                class="category-filter w-full text-left text-gray-600 transition hover:text-[#0f3231]"
+            >
+                Eid &amp; Festival
+            </button>
+        </li>
+
+        <li>
+            <button
+                type="button"
+                data-filter="agriculture-tools"
+                class="category-filter w-full text-left text-gray-600 transition hover:text-[#0f3231]"
+            >
+                Agriculture Tools
+            </button>
+        </li>
+
+    </ul>
+
+</aside>
+
+                <!-- Product Listing -->
+                <div class="min-w-0 lg:col-span-3">
+
+                    <!-- Product Toolbar -->
+                    <div class="mb-6 flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
+
+                        <p class="text-sm text-gray-600">
+                            Showing all products
+                        </p>
+
+                        <div class="flex items-center gap-3">
+
+                            <label for="sort-products"
+                                   class="shrink-0 text-sm text-gray-600">
+                                Sort by:
+                            </label>
+
+                            <select id="sort-products"
+                                    class="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm outline-none focus:border-[#0f3231] sm:w-auto">
+
+                                <option value="featured">Featured</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="name">Name</option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Product Grid -->
+                     <div  id="product-grid"
+                      class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+
+
+            <!-- PRODUCT 1: BBQ Stoves Chinese -->
+            <article  data-category="daily-tools"
+             class="group overflow-hidden rounded-xl border border-gray-200 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+
+                <!-- Image Container -->
+                <div class="relative overflow-hidden bg-gray-100">
+
+                    <a href="product.html" class="block">
+                        <img
+                            src="/Assets/Images/ChineseBBQ Stoves.jpg"
+                            alt="Stoves BBQ"
+                            loading="lazy"
+                            class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
+                        >
+                    </a>
+
+                    <span class="absolute left-3 top-3 rounded-full bg-emerald-600 px-3 py-1 text-xs font-semibold text-white">
+                        Regular
+                    </span>
+
+                    <button
+                        type="button"
+                        aria-label="Add headphones to favorites"
+                        class="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-white text-xl text-gray-800 shadow-sm transition hover:text-red-500"
+                    >
+                        ♡
+                    </button>
+
+                </div>
+
+                <!-- Product Details -->
+                <div class="p-4">
+
+                    <p class="text-sm text-gray-500">BBQ Items</p>
+
+                    <h3 class="mt-2 truncate text-base font-semibold text-gray-900">
+                        <a href="product.html" class="hover:text-[#0f3231]">
+                            চাইনিজ বারবিকিউ চুলা
+                        </a>
+                    </h3>
+
+                    <div class="mt-3 flex items-center justify-between gap-2">
+
+                        <p class="text-xl font-bold text-[#0f3231]">
+                            ৳৭০০
+                        </p>
+
+                        <p class="shrink-0 text-sm text-gray-500">
+                            <span class="text-amber-400">★</span> 4.8
+                        </p>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-[#0f3231] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#164846] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0f3231]"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="1.8">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 3h2l2.2 11.2a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 1.9-1.4L21 8H6" />
+                            <circle cx="10" cy="20" r="1" />
+                            <circle cx="18" cy="20" r="1" />
+                        </svg>
+                        Add to Cart
+                    </button>
+
+                </div>
+            </article>
+
+
+            <!-- PRODUCT 2: BBQ Items -->
+            <article  data-category="bbq-items"
+             class="group overflow-hidden rounded-xl border border-gray-200 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+
+                <div class="relative overflow-hidden bg-gray-100">
+
+                    <a href="product.html" class="block">
+                        <img
+                            src="/Assets/Images/BBQ3.jpg"
+                            alt="Domestic Stoves"
+                            loading="lazy"
+                            class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
+                        >
+                    </a>
+
+                    <button
+                        type="button"
+                        aria-label="Add smart watch to favorites"
+                        class="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-white text-xl text-gray-800 shadow-sm transition hover:text-red-500"
+                    >
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="p-4">
+
+                    <p class="text-sm text-gray-500">BBQ Items</p>
+
+                    <h3 class="mt-2 truncate text-base font-semibold text-gray-900">
+                        <a href="product.html" class="hover:text-[#0f3231]">
+                            দেশী বারবিকিউ চুলা
+                        </a>
+                    </h3>
+
+                    <div class="mt-3 flex items-center justify-between gap-2">
+                        <p class="text-xl font-bold text-[#0f3231]">৳ ৯০০</p>
+                        <p class="shrink-0 text-sm text-gray-500">
+                            <span class="text-amber-400">★</span> ৪.৬
+                        </p>
+                    </div>
+
+                    <button type="button"
+                        class="mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-[#0f3231] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#164846] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0f3231]">
+                        <span aria-hidden="true">🛒</span>
+                        Add to Cart
+                    </button>
+
+                </div>
+            </article>
+
+
+            <!-- PRODUCT 3: bbq  -->
+            <article data-category="home-kitchen" 
+             class="group overflow-hidden rounded-xl border border-gray-200 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+
+                <div class="relative overflow-hidden bg-gray-100">
+
+                    <a href="product.html" class="block">
+                        <img
+                            src="/Assets/Images/BBQ12.jpg"
+                            alt=" A Portable Barbecue Stove "
+                            loading="lazy"
+                            class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
+                        >
+                    </a>
+
+                    <span class="absolute left-3 top-3 rounded-full bg-red-500 px-3 py-1 text-xs font-semibold text-white">
+                        Sale
+                    </span>
+
+                    <button type="button" aria-label="Add backpack to favorites"
+                        class="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-white text-xl text-gray-800 shadow-sm transition hover:text-red-500">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="p-4">
+
+                    <p class="text-sm text-gray-500">BBQ Items</p>
+
+                    <h3 class="mt-2 truncate text-base font-semibold text-gray-900">
+                        <a href="product.html" class="hover:text-[#0f3231]">
+                                Air Regulator Barbecue Stove
+                        </a>
+                    </h3>
+
+                    <div class="mt-3 flex items-center justify-between gap-2">
+
+                        <div class="flex flex-wrap items-center gap-2">
+                            <p class="text-xl font-bold text-[#0f3231]">৳১২০০</p>
+                            <p class="text-sm text-gray-400 line-through">৳১৭৫০</p>
+                        </div>
+
+                        <p class="shrink-0 text-sm text-gray-500">
+                            <span class="text-amber-400">★</span> ৪.৭
+                        </p>
+
+                    </div>
+
+                    <button type="button"
+                        class="mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-[#0f3231] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#164846] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0f3231]">
+                        <span aria-hidden="true">🛒</span>
+                        Add to Cart
+                    </button>
+
+                </div>
+            </article>
+
+
+            <!-- PRODUCT 4: Regular -->
+            <article class="group overflow-hidden rounded-xl border border-gray-200 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+
+                <div class="relative overflow-hidden bg-gray-100">
+
+                    <a href="product.html" class="block">
+                        <img
+                            src="/Assets/Images/FloorKnifeSingle.jpeg"
+                            alt=" Floor Knife "
+                            loading="lazy"
+                            class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
+                        >
+                    </a>
+
+                    <button type="button" aria-label="Add sneakers to favorites"
+                        class="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-white text-xl text-gray-800 shadow-sm transition hover:text-red-500">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="p-4">
+
+                    <p class="text-sm text-gray-500">Regular</p>
+
+                    <h3 class="mt-2 truncate text-base font-semibold text-gray-900">
+                        <a href="product.html" class="hover:text-[#0f3231]">
+                            বটি(Floor Knife)
+                        </a>
+                    </h3>
+
+                    <div class="mt-3 flex items-center justify-between gap-2">
+                        <p class="text-xl font-bold text-[#0f3231]">৳2,999</p>
+                        <p class="shrink-0 text-sm text-gray-500">
+                            <span class="text-amber-400">★</span> 4.5
+                        </p>
+                    </div>
+
+                    <button type="button"
+                        class="mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-[#0f3231] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#164846] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0f3231]">
+                        <span aria-hidden="true">🛒</span>
+                        Add to Cart
+                    </button>
+
+                </div>
+            </article>
+
+
+            <!-- PRODUCT 5: BBQ -->
+            <article class="group overflow-hidden rounded-xl border border-gray-200 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+
+                <div class="relative overflow-hidden bg-gray-100">
+
+                    <a href="product.html" class="block">
+                        <img
+                            src="/Assets/Images/BBQ5.jpg"
+                            alt="All BBQ"
+                            loading="lazy"
+                            class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
+                        >
+                    </a>
+
+                    <button type="button" aria-label="Add blender to favorites"
+                        class="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-white text-xl text-gray-800 shadow-sm transition hover:text-red-500">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="p-4">
+
+                    <p class="text-sm text-gray-500">Home &amp; Kitchen</p>
+
+                    <h3 class="mt-2 truncate text-base font-semibold text-gray-900">
+                        <a href="product.html" class="hover:text-[#0f3231]">
+                           All BBQ Items
+                        </a>
+                    </h3>
+
+                    <div class="mt-3 flex items-center justify-between gap-2">
+                        <p class="text-xl font-bold text-[#0f3231]">৳9,499</p>
+                        <p class="shrink-0 text-sm text-gray-500">
+                            <span class="text-amber-400">★</span> 4.3
+                        </p>
+                    </div>
+
+                    <button type="button"
+                        class="mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-[#0f3231] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#164846] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0f3231]">
+                        <span aria-hidden="true">🛒</span>
+                        Add to Cart
+                    </button>
+
+                </div>
+            </article>
+
+
+            <!-- PRODUCT 6: Cleaver -->
+            <article data-category="eid-festival"
+             class="group overflow-hidden rounded-xl border border-gray-200 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+
+                <div class="relative overflow-hidden bg-gray-100">
+
+                    <a href="product.html" class="block">
+                        <img
+                            src="/Assets/Images/Cleaver Set.jpeg"
+                            alt="MeatCleaver"
+                            loading="lazy"
+                            class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
+                        >
+                    </a>
+
+                    <button type="button" aria-label="Add towels to favorites"
+                        class="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-white text-xl text-gray-800 shadow-sm transition hover:text-red-500">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="p-4">
+
+                    <p class="text-sm text-gray-500">Eid Item &amp; Regular </p>
+
+                    <h3 class="mt-2 truncate text-base font-semibold text-gray-900">
+                        <a href="product.html" class="hover:text-[#0f3231]">
+                            চাপাতি সেট (Meat Cleaver)
+                        </a>
+                    </h3>
+
+                    <div class="mt-3 flex items-center justify-between gap-2">
+                        <p class="text-xl font-bold text-[#0f3231]">৳999</p>
+                        <p class="shrink-0 text-sm text-gray-500">
+                            <span class="text-amber-400">★</span> 4.6
+                        </p>
+                    </div>
+
+                    <button type="button"
+                        class="mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-[#0f3231] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#164846] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0f3231]">
+                        <span aria-hidden="true">🛒</span>
+                        Add to Cart
+                    </button>
+
+                </div>
+            </article>
+
+
+
+        </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <!-- Copy your existing footer from index.html here. -->
+
+
+
+    <script>
+    // Select all category buttons and product cards
+    const categoryButtons = document.querySelectorAll(".category-filter");
+    const productCards = document.querySelectorAll("#product-grid article");
+
+    // Listen for category button clicks
+    categoryButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            // Get the selected category
+            const selectedCategory = button.dataset.filter;
+
+            // Show or hide products
+            productCards.forEach(card => {
+
+                const productCategory = card.dataset.category;
+
+                if (
+                    selectedCategory === "all" ||
+                    productCategory === selectedCategory
+                ) {
+                    card.classList.remove("hidden");
+                } else {
+                    card.classList.add("hidden");
+                }
+
+            });
+
+            // Update the active category appearance
+            categoryButtons.forEach(categoryButton => {
+
+                categoryButton.classList.remove(
+                    "font-semibold",
+                    "text-[#0f3231]"
+                );
+
+                categoryButton.classList.add("text-gray-600");
+
+            });
+
+            button.classList.remove("text-gray-600");
+
+            button.classList.add(
+                "font-semibold",
+                "text-[#0f3231]"
+            );
+
+        });
+
+    });
+</script>
+</body>
+</html>
